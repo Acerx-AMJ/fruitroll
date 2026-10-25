@@ -141,7 +141,7 @@ void print_help()
 void print_version()
 {
    std::cout << "Fruitroll version 1.0.0\n";
-   std::cout << "Made with C++ by chalcinxx.\n";
+   std::cout << "Made with C++ by Daniel Vishnevsky.\n";
 }
 
 void print_info()

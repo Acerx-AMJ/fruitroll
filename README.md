@@ -1,34 +1,20 @@
 # Fruitroll
-## About
-Fruitroll is a fruit-themed CLI slot machine with zero dependencies for destroying productivity.
-## Features
-- 7 unique fruits with different roll chances
-- Crit mechanic with high-tier multipliers
-- A ton of combos with varying rewards
-- Full CLI argument system (see `fruitroll --info`)
-- Different jackpot tiers
+Fruitroll is a fruit-themed CLI slot machine with zero dependencies for destroying productivity. It contains 7 fruits with different roll chances, crit multipliers and a ton of different combos and multipliers. It does not use real money.
 
-## Installation
-Fruitroll is very easy to install and does not require any build system. It requires C++11 or later. Example with `clang`:
+## Building
+Fruitroll uses no dependencies and can be built using CMake:
 ```bash
-clang++ -std=c++11 -O2 -Iinclude src/*.cpp -o fruitroll
+cmake -B build
+cmake --build build
 ```
-Example with `gcc`:
+The executable will be located at `build/fruitroll`. Or build using your favorite compiler:
 ```bash
-g++ -std=c++11 -O2 -Iinclude src/*.cpp -o fruitroll
-```
-To install globally, simply move the executable to `/usr/bin`:
-```bash
-sudo cp fruitroll /usr/bin/fruitroll
+g++ -std=c++11 -Iinclude src/*.cpp -o fruitroll
 ```
 
 ## Usage
 ```bash
 ./fruitroll [arguments]
-```
-or, alternatively, if your executable is found in `/usr/bin`:
-```bash
-fruitroll [arguments]
 ```
 Arguments:
 - `--help`             Display arguments.
@@ -45,14 +31,5 @@ Arguments:
 - `--stop-on=<value>`  Force stop the game when jackpot is equal or bigger than `<value>`.
 - `--seed=<value>`     Use a fixed RNG seed.
 
-
-Made with C++ by chalcinxx.
-
-## License
-MIT License. See [LICENSE](LICENSE) for details.
-
-## Contributing
-This project is made for fun, but PRs are welcome.
-
-#### WARNING!
-Fruitroll is not responsible for unfinished work, excess time spent gambling or broken objects. Roll responsibly and in moderation.
+## Credits
+This project was made by Daniel Vishnevsky and is licensed under MIT License. It was made in July of 2025 and got published on October 2026 as an effort to make all of my projects open-source.
